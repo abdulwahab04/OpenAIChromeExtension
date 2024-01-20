@@ -1,8 +1,29 @@
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { ROUTES } from "../utils/route";
+import { saveData } from "../utils/localStorage";
 
-export default function Profile({ setPage }) {
+export default function Profile({
+  setPage,
+  setAIKey,
+  setResume,
+  AIkey,
+  resume,
+}) {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const resumeData = data.get("resume");
+    const openAIKey = data.get("openAIKey");
+    setAIKey(openAIKey);
+    setResume(resumeData);
+    saveData("resume", resumeData);
+    saveData("openAIKey", openAIKey);
+  };
+
+  //   console.log(AIkey, resume);
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-between mx-5 my-3 items-center">
@@ -14,7 +35,7 @@ export default function Profile({ setPage }) {
           <FaArrowLeft />
         </button>
       </div>
-      <form className="flex-col mx-5">
+      <form className="flex-col mx-5" onSubmit={handleSubmit}>
         <div className="flex-col mb-6">
           <label
             htmlFor="openAIKey"
@@ -28,6 +49,7 @@ export default function Profile({ setPage }) {
             type="text"
             className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg w-full p-2"
             placeholder="sk-....1234"
+            defaultValue={AIkey}
             required
           />
         </div>
@@ -44,12 +66,18 @@ export default function Profile({ setPage }) {
             name="resume"
             className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg w-full p-2"
             placeholder="Paste your resume"
+            defaultValue={resume}
           />
         </div>
+        <div className="mb-6 text-end">
+          <button
+            className="my-3 border-2 border-solid border-blue-500 text-blue-500 text-lg p-2 px-5 rounded-[5px]"
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
       </form>
-      <button className="self-end mx-5 my-3 border-2 border-solid border-blue-500 text-blue-500 text-lg p-2 rounded-[5px]">
-        Save
-      </button>
     </div>
   );
 }
