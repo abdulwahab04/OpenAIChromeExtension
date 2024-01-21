@@ -4,6 +4,9 @@
 
 The Cover Letter Generator is a Chrome extension designed to assist job seekers in creating personalized cover letters efficiently. It harnesses the power of OpenAI's GPT-3 to generate custom cover letters based on job descriptions. This tool is particularly useful for individuals browsing job listings on LinkedIn, streamlining the often tedious and time-consuming process of tailoring cover letters for different job applications.
 
+<img width="1046" alt="image" src="https://github.com/abdulwahab04/OpenAIChromeExtension/assets/88958237/5b7bb5d9-127f-4750-9b90-ec8d9944a957">
+<img width="1102" alt="image" src="https://github.com/abdulwahab04/OpenAIChromeExtension/assets/88958237/c193cafb-d457-494f-8bf6-80bf40a14882">
+
 ### Key Features:
 
 1) Automated Cover Letter Creation: By analyzing the job description from a LinkedIn job posting, the extension generates a tailored cover letter that aligns with the specific requirements and themes of the job.
