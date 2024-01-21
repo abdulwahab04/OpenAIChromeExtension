@@ -19,12 +19,12 @@ The Cover Letter Generator is a Chrome extension designed to assist job seekers 
 
 5) User-Friendly Interface: Includes an intuitive popup interface, allowing users to view, copy, or edit the generated cover letter directly within the extension.
 
-6) Customization Options: Users can input their resume details and other preferences, which are considered by the AI in the cover letter generation process.
+6) Customization Options: Users can input their resume details and other preferences, which the AI considers in the cover letter generation process.
 
 ### Technical Details:
 
 - Developed using React, making the UI interactive and responsive.
-- Utilizes Axios for API communication, particularly for interfacing with OpenAI's GPT-3.5 API.
+- Utilizes Axios for API communication, particularly interfacing with OpenAI's GPT-3.5 API.
 - Employs Chrome's scripting and storage capabilities to interact with the content of web pages (LinkedIn job postings) and store necessary data.
 - Background script in the extension listens to tab updates to detect navigation on LinkedIn job pages.
 
@@ -35,4 +35,6 @@ Data Persistence: Managing local storage effectively to store and retrieve job d
 
 ### Usage Scenario:
 
-A user browsing LinkedIn job listings can click on the extension icon when they find a job they wish to apply for. The extension reads the job description, generates a cover letter using GPT-3, and presents it in a popup window. The user can then customize this letter or save it for future reference.
+You can clone this repository and type "npm install" & "npm run build" in your terminal to build the extension. Then you can go to Chrome extensions and upload the build file to have the extension on your computer. Note that you will need your OpenAI API key to work with ChatGPT-3.5.
+
+A user browsing LinkedIn job listings can click on the extension icon when they find a job they wish to apply for. The extension reads the job description, generates a cover letter using GPT-3.5, and presents it in a popup window. The user can then customize this letter or save it for future reference. Make sure to upload and save your resume initially for a more tailored cover letter.
