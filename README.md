@@ -1,1 +1,1 @@
-# OpenAIChromeExtension
+# Cover Letter Generator
